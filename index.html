@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+	<style>
+	#contrib{
+	width:100%;
+	}
+	.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:999;
+}
+.sticky + .content{
+	padding-top:70px;
+}
+.header-img{
+	object-fit: cover;
+    width: 100%;
+    height: 200px;
+    /* bottom: 6px; */
+    object-position: 100% 15%;
+}
+
+	</style>
+  </head>
+
+  <body>
+<div class="">
+<img src="img/book.jpg" class="img-fluid header-img">
+</div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3" id="myHeader">
+        <div class="container">
+            <a class="navbar-brand" href="/">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle"
+                            data-toggle="dropdown" id="navbarDropdownMenuLink">Your Ideas</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Ideas</a>
+                                <a href="#" class="dropdown-item">Add</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Logout</a>
+                    </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Register</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main" class="container content" id="main">
+
+      <div class="container">
+		  <div id="grid" class="row">
+  			<div class="col-12 changes">
+			<h4>Enter information below:</h4>
+			<form class="row" id="cita_submit" onsubmit="return false;">
+  			<h6 class="col-12">Contributors:</h6>
+			<div id="contrib" class="row">
+			
+			 </div>
+			<div class="form-group col-12">
+			<a href="#" id="add_another"> Add Another Contributor +</a>
+			</div>
+			<h6 class="col-12">Publication Info...</h6>
+			<div class="form-group col-12">
+			<label>Source Title</label>
+			<input type="text" class="form-control" placeholder="Source Title" name="title">
+			</div>
+			
+			<label class="col-12">Advanced Info.</label>
+			<div class="form-group col-4">
+			
+			<input type="text" class="form-control" placeholder="Vol." name="volume">
+			</div>
+			<div class="form-group col-4">
+			<input type="text" class="form-control" placeholder="Edition" name="edition">
+			</div>
+			<div class="form-group col-4">
+			<input type="text" class="form-control" placeholder="Series" name="series">
+			</div>
+			<label class="col-12">Publication Info.</label>
+			<div class="form-group col-3">
+			<input type="text" class="form-control" placeholder="Publisher" name="publisher">
+			</div>
+			<div class="form-group col-3">
+			<input type="text" class="form-control" placeholder="City" name="city">
+			</div>
+			<div class="form-group col-3">
+			<input type="text" class="form-control" placeholder="State" name="state">
+			</div>
+			<div class="form-group col-3">
+			<input type="text" class="form-control" placeholder="Year" name="year">
+			</div>
+			<label class="col-12">Add Annotations.</label>			
+			<div class="form-group col-12">
+			<input type="text" class="form-control" placeholder="Annotation" name="annotation">
+			</div>			
+			<div class="form-group col-12">
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+			
+			</form>
+			
+			</div>
+			<h4 class="col-12">Grid Example</h4>
+			<div id="gridDemo" class="col">
+			<div class="grid-square">Item 1</div>
+			<div class="grid-square">Item 2</div>
+			<div class="grid-square">Item 3</div>
+			<div class="grid-square">Item 4</div>
+			<div class="grid-square">Item 5</div>
+			</div>
+		</div>
+		<div class="col-12" id="sort_result">
+		</div>
+		<div class ="floating-item animated slideInRight">
+			<!-- In Title
+			<button id="close">Close</button> -->
+		</div>
+		<!-- <div class ="floating-item-publisher animated slideInRight">
+			In Publisher
+			<button id="close">Close</button>
+
+		</div> -->
+		<!---</div>
+		<a id="add">Add</a>
+      </div>-->
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/Sortable.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	var i = 0;
+	var add_contri = (i) => {
+	
+		var contrib = $("#contrib");
+		contrib.append('<div class="form-group col-3">'
+				 +'<select class="form-control" id="type_'+i+'">'
+					+'<option selected>Author</option>'
+					+'<option>Editor</option>'
+					+'<option>Translator</option>'
+				  +'</select>'
+				  +'</div>'
+			 +'<div class="form-group col-3">'
+			+'<input type="text" class="form-control" id="first" name="first_name_'+i+'" placeholder="First Name">'
+			 +'</div>'
+			  +'<div class="form-group col-3">'
+				+'<input type="text" class="form-control" id="mid" name="mid_name_'+i+'" placeholder="Mid Name">'
+				+'</div>'
+			    +'<div class="form-group col-3">'
+				+'<input type="text" class="form-control" id="last" name="last_name_'+i+'" placeholder="Last Name">'
+			  +'</div>');
+	}
+	add_contri(i);
+		// Grid demo
+var abc = new Sortable(gridDemo, {
+			animation: 150,
+			ghostClass: 'blue-background-class',
+			onChange:function(evt){
+//				alert("you moved");
+				var elm = document.getElementById("gridDemo").querySelectorAll(".grid-square");
+				console.log(elm.length);
+				let index = "";
+				for (var i = 0; i < elm.length; i++){
+				if(i == elm.length-1){
+					index += elm[i].innerHTML;
+				}
+				else{
+					index += elm[i].innerHTML + ", ";
+				}
+				}
+				 document.getElementById("sort_result").innerHTML = index;
+					console.log(index);
+				},
+			onChoose:function(evt){
+				var item = evt.item;
+				key = item.getAttribute("data-name");
+				console.log(key);
+				// $(".floating-item").css("visibility","visible");
+				// $(".floating-item").addClass('animated');
+				
+				if(key == "title"){
+					// $("div[class^='floating-item-']").hide();
+					$(".floating-item").show();
+					$(".changes").removeClass("col-12");
+					$(".changes").addClass("col-8");
+					$(".floating-item").html('<div class="title-section">In the title..\
+					\
+					<button id="close">Close</button>\
+					</div>');				
+				}
+				else if(key == "publisher"){
+					// $("div[class^='floating-item-']").hide();
+					$(".floating-item").show();
+					$(".floating-item").html('<div class="publisher-section">In the Publisher...\
+					\
+					<button id="close">Close</button>\
+					</div>');
+				}
+				
+			}
+			
+		});
+
+$("#add_another").click(function(){
+  i++;
+  add_contri(i);
+});
+
+function getI(){
+	return i;
+}
+
+$("#cita_submit").on("submit",function(){
+	console.log(getI());
+var htm = '';
+document.getElementById("gridDemo").innerHTML = "";
+var form = $("#cita_submit").serializeArray();
+console.log(form.length);
+var arr = [];
+for(var i = 0; i < form.length; i++){
+arr[form[i].name] = form[i].value;
+//console.log(form[i].name);
+}
+var names = "";
+for (key in arr){
+console.log(key);
+if(arr[key] != "" ){
+if(getI() >= 0){
+	// names = arr[key];
+	// for(var x = 0; x <=getI(); x++){
+		
+	// }
+	if(key.startsWith("first_name")){
+		// console.log(key);
+		// alert("aaa");
+		names = arr[key];
+	}
+	else if(key.startsWith("last_name")){
+		// console.log(key);
+		// alert("aaa");
+		 names+= arr[key];
+		
+	htm += '<div class="grid-square" id="ss" data-name="'+key+'">'+names+'</div>';
+
+	}
+	else{
+		htm += '<div class="grid-square" id="ss" data-name="'+key+'">'+arr[key]+'</div>';
+	}
+
+
+}
+}
+
+
+//$("#gridDemo").append("<div class='grid-square'>"+arr[key]+"</div>");
+
+}
+console.log(htm);
+document.getElementById("gridDemo").innerHTML = htm;
+//var formData = new FormData(document.querySelector('form'))
+//console.log(formData.getAll);
+
+})
+
+$("#add").click(function(){
+$("#gridDemo").append("<div class='grid-square'>Item 1</div>");
+})
+
+$("#ss").on("dblclick",function(){
+	var key_name = $(this).data("name");
+	alert(key_name);
+	console.log("dddd");
+});
+$("#close").click(function(){
+	$("floating-item").hide();
+	$(".changes").removeClass("col-8");
+	$(".changes").addClass("col-12");
+
+})
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+		
+	});
+	</script>
+  </body>
+</html>
