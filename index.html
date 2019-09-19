@@ -150,7 +150,7 @@
 		</div>
 		<div class="col-12" id="sort_result">
 		</div>
-		<div class ="floating-item animated slideInRight">
+		<div class ="col-12 floating-item animated slideInRight">
 			<!-- In Title
 			<button id="close">Close</button> -->
 		</div>
@@ -199,6 +199,7 @@
 	}
 	add_contri(i);
 		// Grid demo
+var floatingMenu = "";
 var abc = new Sortable(gridDemo, {
 			animation: 150,
 			ghostClass: 'blue-background-class',
@@ -227,22 +228,40 @@ var abc = new Sortable(gridDemo, {
 				
 				if(key == "title"){
 					// $("div[class^='floating-item-']").hide();
+					floatingMenu = "title";
 					$(".floating-item").show();
 					$(".changes").removeClass("col-12");
 					$(".changes").addClass("col-8");
 					$(".floating-item").html('<div class="title-section">In the title..\
 					\
-					<button id="close">Close</button>\
+					<button id="close-'+floatingMenu+'">Close</button>\
 					</div>');				
 				}
 				else if(key == "publisher"){
 					// $("div[class^='floating-item-']").hide();
+					floatingMenu = "publisher";
 					$(".floating-item").show();
-					$(".floating-item").html('<div class="publisher-section">In the Publisher...\
+					$(".floating-item").html('<div class="publisher-section row">\
+					<form class="form col-sm-12">\
+						<center><h5>Format Publisher</h5></center>\
+					<div class="form-group col-sm-6">\
+					<label for="'+key+'-suffix">Suffix</label><input type="text" name="'+key+'-suffix" class="form-control"></div>\
 					\
-					<button id="close">Close</button>\
+					</form>\
+					<button id="close-'+floatingMenu+'">Close</button>\
 					</div>');
+
+
 				}
+				$("#close-"+ floatingMenu).click(function(){
+						// alert("something...");
+						// $(".floating-item").removeClass("slideInRight");
+						// $(".floating-item").addClass("slideInLeft");
+						$(".floating-item").hide();
+						$(".changes").removeClass("col-8");
+						$(".changes").addClass("col-12");
+
+					})
 				
 			}
 			
@@ -275,12 +294,18 @@ if(arr[key] != "" ){
 if(getI() >= 0){
 	// names = arr[key];
 	// for(var x = 0; x <=getI(); x++){
-		
+		// define(a = 10);
 	// }
 	if(key.startsWith("first_name")){
 		// console.log(key);
 		// alert("aaa");
 		names = arr[key];
+		names = names.charAt(0).toUpperCase() + ". ";
+	}
+	if(key.startsWith("mid_name")){
+		// console.log(key);
+		// alert("aaa");
+		names += arr[key];
 	}
 	else if(key.startsWith("last_name")){
 		// console.log(key);
@@ -318,13 +343,8 @@ $("#ss").on("dblclick",function(){
 	alert(key_name);
 	console.log("dddd");
 });
-$("#close").click(function(){
-	alert("something...");
-	$("floating-item").hide();
-	$(".changes").removeClass("col-8");
-	$(".changes").addClass("col-12");
+// console.log(floatingMenu);
 
-})
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
