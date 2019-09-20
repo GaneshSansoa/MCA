@@ -150,7 +150,7 @@
 		</div>
 		<div class="col-12" id="sort_result">
 		</div>
-		<div class ="col-12 floating-item animated slideInRight">
+		<div class ="col-12 floating-item animated slideInRight card text-dark">
 			<!-- In Title
 			<button id="close">Close</button> -->
 		</div>
@@ -232,23 +232,36 @@ var abc = new Sortable(gridDemo, {
 					$(".floating-item").show();
 					$(".changes").removeClass("col-12");
 					$(".changes").addClass("col-8");
-					$(".floating-item").html('<div class="title-section">In the title..\
-					\
-					<button id="close-'+floatingMenu+'">Close</button>\
+					$(".floating-item").html('<div class="publisher-section row">\
+					<form class="form col-sm-12">\
+						<center><h5>Format Title</h5></center>\
+						<div class="row">\
+					<div class="form-group col-sm-6">\
+					<label for="'+key+'-suffix">Suffix</label><input type="text" name="'+key+'-suffix" class="form-control"></div>\
+					<div class="form-group col-sm-6">\
+					<label for="'+key+'-prefix">Prefix</label><input type="text" name="'+key+'-prefix" class="form-control"></div>\
+					</div>\
+					</form>\
+					<button id="close-'+floatingMenu+'" class="close">&times;</button>\
 					</div>');				
 				}
 				else if(key == "publisher"){
 					// $("div[class^='floating-item-']").hide();
 					floatingMenu = "publisher";
 					$(".floating-item").show();
+					$(".changes").removeClass("col-12");
+					$(".changes").addClass("col-8");
 					$(".floating-item").html('<div class="publisher-section row">\
 					<form class="form col-sm-12">\
 						<center><h5>Format Publisher</h5></center>\
+						<div class="row">\
 					<div class="form-group col-sm-6">\
 					<label for="'+key+'-suffix">Suffix</label><input type="text" name="'+key+'-suffix" class="form-control"></div>\
-					\
+					<div class="form-group col-sm-6">\
+					<label for="'+key+'-prefix">Prefix</label><input type="text" name="'+key+'-prefix" class="form-control"></div>\
+					</div>\
 					</form>\
-					<button id="close-'+floatingMenu+'">Close</button>\
+					<button id="close-'+floatingMenu+'" class="close">&times;</button>\
 					</div>');
 
 
